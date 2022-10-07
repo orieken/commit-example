@@ -13,23 +13,30 @@
   "license": "MIT",
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-emoji",
-      "customize": {
-        "scopePattern": "^[A-Z]+-[0-9]+ - .*",
-        "scopePatternErrorMsg": "Subject must be in format 'CMS-123 - Commit message'"
-      }
+      "path": "cz-customizable"
     },
     "cz-emoji": {
-      "skipQuestions": ["body", "issue"],
+      "skipQuestions": [
+        "body",
+        "issue"
+      ],
       "questions": {
         "scope": "This is the scope"
-      }
+      },
+      "scopes": [
+        "Team A",
+        "Team B",
+        "Team C"
+      ]
     }
   },
   "devDependencies": {
+    "commitizen": "^4.2.5",
     "commitlint": "^11.0.0",
     "commitlint-config-gitmoji": "^2.2.5",
-    "commitizen": "^4.2.5", 
     "cz-emoji": "^1.3.2-canary.2"
+  },
+  "dependencies": {
+    "cz-customizable": "^7.0.0"
   }
 }
